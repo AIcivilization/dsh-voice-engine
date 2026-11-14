@@ -1,0 +1,11 @@
+dsh-voice-engine（声音引擎）
+
+data/hyper-voice-names.json 的音色名称、性别、语种和场景，以及合成、鉴权的请求格式，
+参考自讯飞官方 iFly-Skills（https://github.com/iflytek/iFly-Skills，Apache License 2.0）。
+
+data/polyphones.json 由 pypinyin（https://github.com/mozillazg/python-pinyin，MIT License）
+的词库统计生成。
+
+python/ming_worker.py 和 lib/engine/spoken.js 来自 dsh-go（听懂，https://github.com/AIcivilization/dsh-tingdong，MIT License）。
+Edge 的音色表参考 dsh-go 和 dsh-audiobook。本插件不包含 edge-tts 和 Ming 模型，运行时使用本机已经装好的那一份：
+edge-tts（https://github.com/rany2/edge-tts，LGPL-3.0），Ming-3.0-tts-0.5B（inclusionAI，MIT License）。

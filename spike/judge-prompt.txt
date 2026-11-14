@@ -1,0 +1,26 @@
+下面是语音合成引擎实际读出的拼音（数字是声调，5 是轻声）。请逐句检查有没有读错的字。
+
+判断规则：
+- 只报告真正读错的字，比如多音字选错了读音
+- 连续三声变调和「一」「不」的变调属于正常现象，不算错误
+- 不确定的字说明理由，不要猜
+
+输出格式：每句一行，写「句 N：无错误」或「句 N：某字应读某音，实际读某音」。
+
+句 1：我在重庆的银行工作，每天行走在长江边。
+拼音：我[wo3] 在[zai4] 重[chong2] 庆[qing4] 的[de5] 银[yin2] 行[xing2] 工[gong1] 作[zuo4] 每[mei3] 天[tian1] 行[xing2] 走[zou3] 在[zai4] 长[chang2] 江[jiang1] 边[bian1]
+
+句 2：他还没还钱，这首音乐让人快乐。
+拼音：他[ta1] 还[hai2] 没[mei2] 还[huan2] 钱[qian2] 这[zhe4] 首[shou3] 音[yin1] 乐[yue4] 让[rang4] 人[ren2] 快[kuai4] 乐[le4]
+
+句 3：这个重要的包裹很重。
+拼音：这[zhe4] 个[ge9] 重[zhong4] 要[yao4] 的[de5] 包[bao1] 裹[guo3] 很[hen3] 重[zhong4]
+
+句 4：长大后他成了校长，头发却越来越长。
+拼音：长[zhang3] 大[da4] 后[hou4] 他[ta1] 成[cheng2] 了[le5] 校[xiao4] 长[zhang3] 头[tou2] 发[fa5] 却[que4] 越[yue4] 来[lai2] 越[yue4] 长[zhang3]
+
+句 5：朝阳区的朝阳很美，他朝着单位走去。
+拼音：朝[chao2] 阳[yang2] 区[qu1] 的[de5] 朝[chao2] 阳[yang2] 很[hen2] 美[mei3] 他[ta1] 朝[chao2] 着[zhe5] 单[dan1] 位[wei4] 走[zou3] 去[qu9]
+
+句 6：CEO说AI的API调用量翻了一倍。
+拼音：CEO[英文] 说[shuo1] AI[英文] 的[de5] API[英文] 调[tiao2] 用[yong4] 量[liang4] 翻[fan1] 了[le5] 一[yi2] 倍[bei4]

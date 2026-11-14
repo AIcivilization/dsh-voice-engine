@@ -1,0 +1,36 @@
+[
+  { "id": "S01", "name": "宣传片旁白 + 字幕", "group": "配音与视频", "mode": "hybrid", "needs": ["voices", "dub"], "milestone": "M2", "say": "给这份文案配个沉稳的旁白", "outputs": ["音频", "SRT", "工程"], "playbook": "S01.md", "eval": "给这段文案配个沉稳的旁白，要字幕" },
+  { "id": "S02", "name": "短视频口播 + 卡点字幕", "group": "配音与视频", "mode": "hybrid", "needs": ["voices", "dub"], "milestone": "M2", "say": "改成 60 秒口播，活泼点", "outputs": ["音频", "ASS"], "playbook": "S02.md", "eval": "把这段改成 30 秒口播，活泼点，要卡点字幕" },
+  { "id": "S03", "name": "改稿增量重配", "group": "配音与视频", "mode": "hybrid", "needs": ["dub"], "milestone": "M2", "say": "第三段语气再正式点", "outputs": ["新音频", "新字幕"], "playbook": "S03.md", "eval": "第二句语气再正式点" },
+  { "id": "S04", "name": "多语言版本", "group": "配音与视频", "mode": "ai", "needs": ["voices", "dub", "official"], "milestone": "M5", "say": "再出英语和日语版", "outputs": ["各语种音频", "字幕"] },
+  { "id": "S05", "name": "分角色对白", "group": "配音与视频", "mode": "ai", "needs": ["voices", "dub"], "milestone": "M5", "say": "这个剧本按角色配", "outputs": ["分轨和合并音频"] },
+  { "id": "S06", "name": "视频翻译", "group": "配音与视频", "mode": "code", "needs": ["official"], "milestone": "M4", "say": "把这个视频做成英文版", "outputs": ["翻译后的视频"] },
+  { "id": "S07", "name": "手绘动画讲解", "group": "配音与视频", "mode": "ai", "needs": ["dub", "official"], "milestone": "M5", "say": "用动画图讲清这个流程，配上解说", "outputs": ["动画", "GIF", "解说音频"] },
+
+  { "id": "S08", "name": "一键朗读", "group": "音频内容", "mode": "code", "needs": ["dub"], "milestone": "M1", "say": "把这段读出来", "outputs": ["音频"], "playbook": "S08.md", "eval": "把这句话读出来：欢迎收听今天的节目" },
+  { "id": "S09", "name": "有声书", "group": "音频内容", "mode": "ai", "needs": ["voices", "dub"], "milestone": "M5", "say": "这本小说按角色做成有声书", "outputs": ["分章音频", "章节表"] },
+  { "id": "S10", "name": "课件配音", "group": "音频内容", "mode": "hybrid", "needs": ["voices", "dub"], "milestone": "M5", "say": "按 PPT 备注逐页配音", "outputs": ["逐页音频", "时间表"] },
+  { "id": "S11", "name": "文章音频版", "group": "音频内容", "mode": "hybrid", "needs": ["voices", "dub"], "milestone": "M5", "say": "把这篇公众号做成音频", "outputs": ["音频", "章节标记"] },
+  { "id": "S12", "name": "播客口播稿", "group": "音频内容", "mode": "ai", "needs": ["voices", "dub"], "milestone": "M5", "say": "写成播客稿并配音", "outputs": ["稿件", "音频", "时长表"] },
+  { "id": "S13", "name": "语音包批量生成", "group": "音频内容", "mode": "code", "needs": ["dub"], "milestone": "M1", "say": "这张表的提示语都生成音频", "outputs": ["按清单命名的音频"], "playbook": "S13.md", "eval": "把 prompts.txt 里的提示语都生成音频" },
+
+  { "id": "S14", "name": "音频转文字", "group": "转写", "mode": "code", "needs": ["transcribe"], "milestone": "M3", "say": "把这段录音转成文字", "outputs": ["文稿"], "playbook": "S14.md", "eval": "把这段录音转成文字" },
+  { "id": "S15", "name": "视频转字幕", "group": "转写", "mode": "code", "needs": ["transcribe"], "milestone": "M3", "say": "给这个视频出字幕", "outputs": ["SRT", "VTT"], "playbook": "S15.md", "eval": "给这个视频出字幕" },
+  { "id": "S16", "name": "会议纪要", "group": "转写", "mode": "hybrid", "needs": ["transcribe"], "milestone": "M3", "say": "把录音整理成纪要", "outputs": ["逐字稿", "纪要"], "playbook": "S16.md", "eval": "把这段录音整理成会议纪要" },
+  { "id": "S17", "name": "播客转文章", "group": "转写", "mode": "ai", "needs": ["transcribe"], "milestone": "M3", "say": "把这期节目改写成文章", "outputs": ["文章"], "playbook": "S17.md", "eval": "把这期节目改写成文章" },
+  { "id": "S18", "name": "采访整理", "group": "转写", "mode": "hybrid", "needs": ["transcribe"], "milestone": "M3", "say": "按话题整理，标出时间点", "outputs": ["带时间戳的素材表"], "playbook": "S18.md", "eval": "按话题整理这段采访，标出时间点" },
+  { "id": "S19", "name": "录音质检", "group": "转写", "mode": "ai", "needs": ["transcribe"], "milestone": "M3", "say": "查这批录音有没有违规话术", "outputs": ["命中项和时间点"], "playbook": "S19.md", "eval": "查这批录音有没有违规话术" },
+  { "id": "S20", "name": "字幕翻译", "group": "转写", "mode": "hybrid", "needs": ["model"], "milestone": "M3", "say": "把字幕翻成英文", "outputs": ["新 SRT"], "playbook": "S20.md", "eval": "把这个字幕翻成英文" },
+
+  { "id": "S21", "name": "音色查询试听", "group": "音色", "mode": "code", "needs": ["voices"], "milestone": "M1", "say": "看看有哪些粤语音色", "outputs": ["候选和样音"], "playbook": "S21.md", "eval": "看看有哪些女声音色" },
+  { "id": "S22", "name": "用我的文案试音", "group": "音色", "mode": "code", "needs": ["voices", "dub"], "milestone": "M1", "say": "这几个音色读这句对比下", "outputs": ["对比音频"], "playbook": "S22.md", "eval": "用聆小璇和聆飞逸读这句对比下：今天天气真好" },
+  { "id": "S23", "name": "按场景推荐音色", "group": "音色", "mode": "ai", "needs": ["voices"], "milestone": "M1", "say": "科技宣传片用哪个音色好", "outputs": ["3 个候选和理由"], "playbook": "S23.md", "eval": "科技宣传片用哪个音色好？" },
+  { "id": "S24", "name": "声音复刻", "group": "音色", "mode": "hybrid", "needs": ["voices", "official"], "milestone": "M4", "say": "用这段录音做我的专属音色", "outputs": ["可用的音色"] },
+
+  { "id": "S25", "name": "扫描件转文字", "group": "文档与图像", "mode": "code", "needs": ["official"], "milestone": "M4", "say": "把这个扫描 PDF 转成文字", "outputs": ["Markdown 或文本"] },
+  { "id": "S26", "name": "公文校对", "group": "文档与图像", "mode": "code", "needs": ["official"], "milestone": "M4", "say": "校对这份文件", "outputs": ["错误清单"] },
+  { "id": "S27", "name": "文档翻译", "group": "文档与图像", "mode": "code", "needs": ["official"], "milestone": "M4", "say": "把这份文档翻成英文", "outputs": ["译文"] },
+  { "id": "S28", "name": "票据识别", "group": "文档与图像", "mode": "code", "needs": ["official"], "milestone": "M4", "say": "识别这些发票", "outputs": ["结构化数据"] },
+  { "id": "S29", "name": "合同审核", "group": "文档与图像", "mode": "ai", "needs": ["official"], "milestone": "M4", "say": "审一下这份合同的风险", "outputs": ["审核报告"] },
+  { "id": "S30", "name": "图片理解", "group": "文档与图像", "mode": "code", "needs": ["official"], "milestone": "M4", "say": "这张图里写了什么", "outputs": ["回答"] }
+]

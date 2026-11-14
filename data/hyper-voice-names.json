@@ -1,0 +1,401 @@
+[
+{
+"name": "聆小璇",
+"vcn": "x5_lingxiaoxuan_flow",
+"gender": "成年女",
+"lang": "中文普通话",
+"scene": null
+},
+{
+"name": "聆飞逸",
+"vcn": "x5_lingfeiyi_flow",
+"gender": "成年男",
+"lang": "中文普通话",
+"scene": null
+},
+{
+"name": "聆小玥",
+"vcn": "x5_lingxiaoyue_flow",
+"gender": "成年女",
+"lang": "中文普通话",
+"scene": null
+},
+{
+"name": "聆玉昭",
+"vcn": "x5_lingyuzhao_flow",
+"gender": "成年女",
+"lang": "中文普通话",
+"scene": null
+},
+{
+"name": "聆玉言",
+"vcn": "x5_lingyuyan_flow",
+"gender": "成年女",
+"lang": "中文普通话",
+"scene": null
+},
+{
+"name": "聆小糖",
+"vcn": "x5_lingxiaotang_flow",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "语音助手"
+},
+{
+"name": "Lila",
+"vcn": "x5_EnUs_Lila_flow",
+"gender": "女",
+"lang": "英文美式",
+"scene": "交互聊天"
+},
+{
+"name": "Grant",
+"vcn": "x5_EnUs_Grant_flow",
+"gender": "女",
+"lang": "英文美式",
+"scene": "交互聊天"
+},
+{
+"name": "海绵宝宝",
+"vcn": "x6_huanlemianbao_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "卡通"
+},
+{
+"name": "商务殷语",
+"vcn": "x6_xiangruiyingyu_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "商务"
+},
+{
+"name": "温柔男声",
+"vcn": "x6_taiqiangnuannan_pro",
+"gender": "男",
+"lang": "台湾腔",
+"scene": "客服"
+},
+{
+"name": "回访女声",
+"vcn": "x6_huifangnv_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "客服"
+},
+{
+"name": "聆飞文",
+"vcn": "x6_lingfeiwen_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "情感合成"
+},
+{
+"name": "聆小芸",
+"vcn": "x6_wumeinv_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆伯松",
+"vcn": "x6_lingbosong_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "旁白"
+},
+{
+"name": "少女可莉",
+"vcn": "x6_dudulibao_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "卡通"
+},
+{
+"name": "滑稽大妈",
+"vcn": "x6_huajidama_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "搞笑"
+},
+{
+"name": "活泼少年",
+"vcn": "x6_huoposhaonian_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "卡通"
+},
+{
+"name": "聆小雪",
+"vcn": "x6_lingxiaoxue_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "催收客服",
+"vcn": "x6_cuishounvsheng_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "客服"
+},
+{
+"name": "营销女声",
+"vcn": "x6_yingxiaonv_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "营销"
+},
+{
+"name": "温暖磁性男声",
+"vcn": "x6_wennuancixingnansheng_mini",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "客服"
+},
+{
+"name": "奶狗弟弟",
+"vcn": "x6_xiaonaigoudidi_mini",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "年轻"
+},
+{
+"name": "士兵女声",
+"vcn": "x6_shibingnvsheng_mini",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "角色"
+},
+{
+"name": "恐怖女声",
+"vcn": "x6_kongbunvsheng_mini",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "恐怖"
+},
+{
+"name": "娱乐新闻",
+"vcn": "x6_yulexinwennvsheng_mini",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "新闻"
+},
+{
+"name": "温柔男声",
+"vcn": "x6_wenrounansheng_mini",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "客服"
+},
+{
+"name": "景区导览",
+"vcn": "x6_jingqudaolannvsheng_mini",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "导览"
+},
+{
+"name": "大气宣传片",
+"vcn": "x6_daqixuanchuanpiannansheng_mini",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "宣传片"
+},
+{
+"name": "古风侠女",
+"vcn": "x6_gufengxianv_mini",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "古风"
+},
+{
+"name": "午夜电台",
+"vcn": "x6_wuyediantai_mini",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "电台"
+},
+{
+"name": "贴心男友",
+"vcn": "x6_tiexinnanyou_mini",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "角色"
+},
+{
+"name": "聆小璃",
+"vcn": "x6_lingxiaoli_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆小琪",
+"vcn": "x6_xiaoqiChat_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆飞逸",
+"vcn": "x6_lingfeiyi_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "情感合成"
+},
+{
+"name": "聆飞哲",
+"vcn": "x6_feizheChat_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆小玥",
+"vcn": "x6_lingxiaoyue_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "情感合成"
+},
+{
+"name": "聆小璇",
+"vcn": "x6_lingxiaoxuan_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆玉言",
+"vcn": "x6_lingyuyan_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "旁白男声",
+"vcn": "x6_pangbainan1_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "旁白配音"
+},
+{
+"name": "旁白女声",
+"vcn": "x6_pangbainv1_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "旁白配音"
+},
+{
+"name": "聆飞瀚",
+"vcn": "x6_lingfeihan_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "纪录片旁白"
+},
+{
+"name": "聆飞皓",
+"vcn": "x6_lingfeihao_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "广告"
+},
+{
+"name": "古风旁白",
+"vcn": "x6_gufengpangbai_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "古风旁白"
+},
+{
+"name": "聆园儿",
+"vcn": "x6_lingyuaner_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "干练女性",
+"vcn": "x6_ganliannvxing_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "职场"
+},
+{
+"name": "儒雅大叔",
+"vcn": "x6_ruyadashu_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "角色"
+},
+{
+"name": "聆玉菲",
+"vcn": "x6_lingyufei_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "时政新闻"
+},
+{
+"name": "聆小珊",
+"vcn": "x6_lingxiaoshan_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆小芸",
+"vcn": "x6_lingxiaoyun_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "情感合成"
+},
+{
+"name": "聆佑佑",
+"vcn": "x6_lingyouyou_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "童声"
+},
+{
+"name": "聆小颖",
+"vcn": "x6_lingxiaoying_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆小瑱",
+"vcn": "x6_lingxiaozhen_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "交互聊天"
+},
+{
+"name": "聆飞博",
+"vcn": "x6_lingfeibo_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "新闻"
+},
+{
+"name": "外国大叔",
+"vcn": "x6_waiguodashu_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "角色"
+},
+{
+"name": "高冷男神",
+"vcn": "x6_gaolengnanshen_pro",
+"gender": "男",
+"lang": "中文普通话",
+"scene": "角色"
+},
+{
+"name": "动漫少女",
+"vcn": "x6_dongmanshaonv_pro",
+"gender": "女",
+"lang": "中文普通话",
+"scene": "动漫角色"
+}
+]
