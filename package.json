@@ -76,10 +76,10 @@
   "author": "AIcivilization",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AIcivilization/dsh-voice-engine-.git"
+    "url": "git+https://github.com/AIcivilization/dsh-voice-engine.git"
   },
-  "homepage": "https://github.com/AIcivilization/dsh-voice-engine-#readme",
+  "homepage": "https://github.com/AIcivilization/dsh-voice-engine#readme",
   "bugs": {
-    "url": "https://github.com/AIcivilization/dsh-voice-engine-/issues"
+    "url": "https://github.com/AIcivilization/dsh-voice-engine/issues"
   }
 }
