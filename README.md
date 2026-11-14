@@ -171,7 +171,7 @@ curl -s "$URL/v1/speak" -H "Authorization: Bearer $TOKEN" -H 'content-type: appl
   -d '{"text":"你好","voice":"edge:zh-CN-XiaoxiaoNeural"}' -o hello.mp3
 ```
 
-讯飞默认不对外开放，免得别的程序花你的额度，要用到设置页打开。不开 DSH 也能用：`npx dsh-voice-engine serve`。完整说明、Python 和 Node 例子见 [docs/声音引擎接口.md](docs/声音引擎接口.md)。
+用哪几家声音在设置页的「声音引擎接口」里勾选，没勾的那家 DSH 里和接口都不用。讯飞默认不对外开放，免得别的程序花你的额度，要用到卡片的详细里打开。不开 DSH 也能用：`npx dsh-voice-engine serve`。完整说明、Python 和 Node 例子见 [docs/声音引擎接口.md](docs/声音引擎接口.md)。
 
 ## 开发
 

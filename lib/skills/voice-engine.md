@@ -42,7 +42,7 @@ CEO说AI的API调[=diao4]用量翻了一倍。
 
 ## 音色
 
-- 有三家声音：讯飞（扣额度，超拟人能查读音）、Edge（免费，联网）、Ming（免费，本机）。用户要免费的，或点名晓晓、云希、灵小雅这类名字，`voice_speak` 的 `vcn` 传 `edge:…` 或 `ming:…`。Edge、Ming 没有读音反馈，读音要求高的内容建议用讯飞。
+- 有三家声音：讯飞（扣额度，超拟人能查读音）、Edge（免费，联网）、Ming（免费，本机）。用户要免费的，或点名晓晓、云希、灵小雅这类名字，`voice_speak` 的 `vcn` 传 `edge:…` 或 `ming:…`。Edge、Ming 没有读音反馈，读音要求高的内容建议用讯飞。用户可以在设置页只勾选其中几家：没勾的那家 `voice_voices` 查不到，`voice_speak` 会返回 `source-off`，这时换已启用的来源，不要绕过去。
 - 用 `voice_voices` 的 `engine=edge` 或 `engine=ming` 查这两家的音色。
 
 - `voice_voices` 查音色。`status` 是 `ok` 表示当前账号调用成功过，`denied` 表示未授权，`unknown` 表示还没试过。

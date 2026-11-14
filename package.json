@@ -1,6 +1,6 @@
 {
   "name": "dsh-voice-engine",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "声音引擎：讯飞、Edge、本机 Ming 三家声音，DSH 里直接用，也通过本机接口给别的插件和产品用；讯飞超拟人音色能返回实际读音，让模型自己查错改错。· Voice engine for DeepSeek Harness: iFLYTEK, Edge and local Ming voices, usable in DSH and by other plugins and apps through a local API.",
   "keywords": [
     "dsh-plugin",

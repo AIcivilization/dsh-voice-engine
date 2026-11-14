@@ -377,3 +377,64 @@ test('给别的 DSH 插件的服务：能合成、能查音色；讯飞默认不
   assert.equal((await svc.speak('你好', { voice: '聆飞瀚', format: 'wav' })).engine, 'xfyun')
   await updateSettings({ engineAllowXfyun: false }, env)
 })
+
+test('来源勾选：没勾的那家对外不列音色、不能合成；讯飞对外还要另外允许', async () => {
+  const { s, call, env } = await server()
+  const { createVoiceService } = await import('../lib/engine/service.js')
+  try {
+    const before = await (await call('/v1/engines')).json()
+    assert.deepEqual([before.engines.xfyun.open, before.engines.edge.open, before.engines.ming.open], [false, true, true])
+    assert.equal((await (await call('/v1/voices?engine=xfyun')).json()).total, 0, '讯飞没允许对外，不列')
+
+    await updateSettings({ useEdge: false }, env)
+    const closed = await call('/v1/speak', { method: 'POST', body: { text: '你好', voice: 'edge:zh-CN-XiaoxiaoNeural' } })
+    assert.equal(closed.status, 403)
+    const reason = await closed.json()
+    assert.equal(reason.kind, 'engine-closed')
+    assert.match(reason.hint, /声音引擎接口/)
+    assert.equal((await (await call('/v1/voices?engine=edge')).json()).total, 0)
+    assert.ok((await (await call('/v1/voices')).json()).voices.every((v) => v.engine === 'ming'), '只剩勾选的 Ming')
+    assert.equal((await (await call('/v1/engines')).json()).engines.edge.open, false)
+    const svc = createVoiceService({ env })
+    await assert.rejects(svc.speak('你好', { voice: '晓晓' }), (e) => e.kind === 'engine-closed')
+    assert.equal(svc.voices({ engine: 'edge' }).total, 0)
+
+    await updateSettings({ engineAllowXfyun: true }, env)
+    assert.ok((await (await call('/v1/voices?engine=xfyun')).json()).total > 0, '允许后列出讯飞')
+    await updateSettings({ useXfyun: false }, env)
+    assert.equal((await (await call('/v1/voices?engine=xfyun')).json()).total, 0, '讯飞没勾选，允许对外也不列')
+    assert.equal((await call('/v1/speak', { method: 'POST', body: { text: '你好', voice: '聆飞瀚' } })).status, 403)
+  } finally {
+    await updateSettings({ engineAllowXfyun: false, useXfyun: true, useEdge: true, useMing: true }, env)
+    await s.close()
+  }
+})
+
+test('来源勾选：插件自己也只用勾选了的，默认音色跟着换', async () => {
+  const { env, deps, synth } = await setup()
+  const { synthesize, SpeakError } = await import('../lib/speak.js')
+  const { defaultVoiceAny } = await import('../lib/voices.js')
+  const { searchVoices } = await import('../lib/voices.js')
+  const { searchOtherVoices, synthesizeAny } = await import('../lib/engine/index.js')
+  const { routingPrompt } = await import('../lib/guard.js')
+  try {
+    // 只要免费的：不勾讯飞
+    await updateSettings({ useXfyun: false, defaultVcn: '' }, env)
+    const calls = synth.calls.length
+    await assert.rejects(synthesize({ text: '你好', vcn: '聆飞瀚' }, deps), (e) => e instanceof SpeakError && e.kind === 'source-off' && /Edge/.test(e.hint))
+    assert.equal(synth.calls.length, calls, '没有发给讯飞')
+    assert.equal(searchVoices({}).total, 0)
+    assert.match(defaultVoiceAny(), /^edge:/, '默认音色换成勾选了的第一家')
+    assert.equal((await synthesizeAny({ text: '你好' }, deps)).engine, 'edge')
+    assert.match(routingPrompt(), /没有启用讯飞/)
+
+    // 只要讯飞：不勾免费的
+    await updateSettings({ useXfyun: true, useEdge: false, useMing: false, defaultVcn: 'edge:zh-CN-XiaoxiaoNeural' }, env)
+    assert.equal(searchOtherVoices({}, env).total, 0)
+    await assert.rejects(synthesizeAny({ text: '你好', voice: 'edge:zh-CN-XiaoxiaoNeural' }, deps), (e) => e.kind === 'source-off')
+    assert.ok(!/^(edge|ming):/.test(defaultVoiceAny()), '默认音色是 Edge 但 Edge 没勾选，回到讯飞')
+    assert.equal(defaultVoiceInfo().chosen, false)
+  } finally {
+    await updateSettings({ useXfyun: true, useEdge: true, useMing: true, defaultVcn: '' }, env)
+  }
+})
